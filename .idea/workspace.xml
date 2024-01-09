@@ -4,21 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19f71c32-b62e-470a-ac87-77fe25c081dd" name="Changes" comment="" />
+    <list default="true" id="19f71c32-b62e-470a-ac87-77fe25c081dd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/BrokenBeach.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/CangguBeach.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/DiamondBeach.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/KelingkingBeach.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/chevron.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/like.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Header.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/RenderItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/data.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/navigator/RootNavigation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screens/Book.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screens/Detail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screens/Home.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/handleOpacity.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/babel.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/shared-element-test" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2afJQmlg8cNPsirspZ1hrE2qgCM" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -29,11 +50,13 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/quentin/Desktop/Webstart/dev_3/react_native/shared_element_test",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/Users/quentin/Desktop/Webstart/dev_3/react_native/shared_element_test/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -46,6 +69,12 @@
       </map>
     </option>
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/assets" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -55,6 +84,7 @@
       <option name="presentableId" value="Default" />
       <updated>1704703685863</updated>
       <workItem from="1704703687024" duration="1055000" />
+      <workItem from="1704705806998" duration="31519000" />
     </task>
     <servers />
   </component>
