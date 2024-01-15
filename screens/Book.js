@@ -17,38 +17,24 @@ function Book({route}) {
     const paypalAnim = useRef(new Animated.Value(-screenWidth * 1.2)).current
     const visaAnim = useRef(new Animated.Value(0)).current
 
-    const handleVisa = () => {
-        setPressed(true)
-        Animated.timing(visaAnim, {
-            toValue: 0,
-            duration: 450,
-            useNativeDriver: true,
-            easing: Easing.elastic(.9),
-        }).start()
-
-        Animated.timing(paypalAnim, {
-            toValue: -screenWidth * 1.2,
+    const animateCard = (animValue, toValue) => {
+        Animated.timing(animValue, {
+            toValue: toValue,
             duration: 400,
             useNativeDriver: true,
             easing: Easing.elastic(1),
-        }).start()
+        }).start();
+    };
+
+    const handleVisa = () => {
+        setPressed(true)
+        animateCard(visaAnim, 0);
+        animateCard(paypalAnim, -screenWidth * 1.2);
     }
     const handlePaypal = () => {
         setPressed(false)
-        Animated.timing(visaAnim, {
-            toValue: screenWidth * 1.2,
-            duration: 400,
-            useNativeDriver: true,
-            easing: Easing.elastic(1),
-        }).start()
-
-        Animated.timing(paypalAnim, {
-            toValue: 0,
-            duration: 450,
-            useNativeDriver: true,
-            easing: Easing.elastic(.9),
-        }).start()
-
+        animateCard(visaAnim, screenWidth * 1.2);
+        animateCard(paypalAnim, 0);
     }
 
     return (

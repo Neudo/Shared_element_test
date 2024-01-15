@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19f71c32-b62e-470a-ac87-77fe25c081dd" name="Changes" comment="added redux store / back to home">
+    <list default="true" id="19f71c32-b62e-470a-ac87-77fe25c081dd" name="Changes" comment="style cards &amp; transition">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/Book.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Book.js" afterDir="false" />
     </list>
@@ -67,7 +67,7 @@
       <updated>1704703685863</updated>
       <workItem from="1704703687024" duration="1055000" />
       <workItem from="1704705806998" duration="33042000" />
-      <workItem from="1705060026267" duration="32233000" />
+      <workItem from="1705060026267" duration="33656000" />
     </task>
     <task id="LOCAL-00001" summary="added Book screen">
       <option name="closed" value="true" />
@@ -93,7 +93,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705327794125</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="style cards &amp; transition">
+      <option name="closed" value="true" />
+      <created>1705332444825</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1705332444825</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,6 +111,7 @@
     <MESSAGE value="added Book screen" />
     <MESSAGE value="added success screen" />
     <MESSAGE value="added redux store / back to home" />
-    <option name="LAST_COMMIT_MESSAGE" value="added redux store / back to home" />
+    <MESSAGE value="style cards &amp; transition" />
+    <option name="LAST_COMMIT_MESSAGE" value="style cards &amp; transition" />
   </component>
 </project>
