@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19f71c32-b62e-470a-ac87-77fe25c081dd" name="Changes" comment="added Book screen">
-      <change afterPath="$PROJECT_DIR$/assets/visa.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screens/Success.js" afterDir="false" />
+    <list default="true" id="19f71c32-b62e-470a-ac87-77fe25c081dd" name="Changes" comment="added success screen">
+      <change afterPath="$PROJECT_DIR$/src/features/savedBeach.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/RenderItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/RenderItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navigator/RootNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/navigator/RootNavigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/Book.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Book.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/Success.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Success.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +72,7 @@
       <updated>1704703685863</updated>
       <workItem from="1704703687024" duration="1055000" />
       <workItem from="1704705806998" duration="33042000" />
-      <workItem from="1705060026267" duration="19882000" />
+      <workItem from="1705060026267" duration="27546000" />
     </task>
     <task id="LOCAL-00001" summary="added Book screen">
       <option name="closed" value="true" />
@@ -84,7 +82,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704834132941</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added success screen">
+      <option name="closed" value="true" />
+      <created>1705312666789</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1705312666789</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -92,6 +98,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added Book screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Book screen" />
+    <MESSAGE value="added success screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="added success screen" />
   </component>
 </project>

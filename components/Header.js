@@ -11,6 +11,7 @@ import Animated, {
 } from "react-native-reanimated";
 import {useDispatch, useSelector} from "react-redux";
 import {makeVisible} from "../src/features/handleOpacity";
+import {savedBeach} from "../src/features/savedBeach";
 
 
 function Header(props) {

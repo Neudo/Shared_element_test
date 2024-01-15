@@ -2,13 +2,22 @@ import React from 'react';
 import {View, Text, Pressable, StyleSheet} from "react-native";
 import Animated, {FadeInDown} from "react-native-reanimated";
 import {useNavigation} from "@react-navigation/native";
+import {useDispatch} from "react-redux";
+import {setCurrentBeach} from "../src/features/savedBeach";
 
 function RenderItem({item, index}) {
     const navigation = useNavigation()
+    const dispatch = useDispatch();
+
+    const handlePress = () => {
+        dispatch(setCurrentBeach(item))
+        navigation.navigate('Detail', {item: item})
+    }
+
     return (
         <Animated.View entering={FadeInDown.delay(200 * index)} >
             <Pressable style={styles.container}
-                       onPress={() => navigation.navigate('Detail', {item: item})}
+                       onPress={() => handlePress()}
             >
                 <Animated.Image
                     sharedTransitionTag={item.name}

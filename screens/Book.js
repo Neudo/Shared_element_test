@@ -4,9 +4,11 @@ import Header from "../components/Header";
 import { ListItem } from '@rneui/themed';
 import {color, Icon} from "@rneui/base";
 import {useNavigation} from "@react-navigation/native";
+import {useSelector} from "react-redux";
 
-function Book() {
+function Book({route}) {
     const navigation = useNavigation()
+    const currentBeach = useSelector((state) => state.savedBeach.currentBeach);
 
     const screenWidth = Dimensions.get("window").width;
     const [pressed, setPressed] = React.useState(true);
@@ -37,8 +39,8 @@ function Book() {
 
                     >
                         <ListItem.Content>
-                            <ListItem.Title>Canggu Beach</ListItem.Title>
-                            <ListItem.Subtitle>Bali, indonesia</ListItem.Subtitle>
+                            <ListItem.Title>{ currentBeach.name }</ListItem.Title>
+                            <ListItem.Subtitle>{ currentBeach.location }</ListItem.Subtitle>
                             <ListItem.Subtitle>Price : 2450$</ListItem.Subtitle>
                         </ListItem.Content>
                         <ListItem.Chevron />

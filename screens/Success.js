@@ -1,10 +1,12 @@
 import React, { useEffect, useRef } from 'react';
-import {View, Text, StyleSheet, Animated, ImageBackground, Easing} from "react-native";
+import {View, Text, StyleSheet, Animated, ImageBackground, Easing, Pressable} from "react-native";
+import {useSelector} from "react-redux";
 
 const AnimatedImageBackground = Animated.createAnimatedComponent(ImageBackground);
 
 function Success(props) {
     const scaleAnim = useRef(new Animated.Value(1.3)).current;  // Initial value for scale
+    const currentBeach = useSelector((state) => state.savedBeach.currentBeach);
 
     useEffect(() => {
         Animated.timing(
@@ -21,7 +23,7 @@ function Success(props) {
     return (
         <View style={styles.container}>
             <AnimatedImageBackground
-                source={require('../assets/DiamondBeach.jpg')}
+                source={currentBeach.image}
                 resizeMode='cover'
                 style={[
                     styles.bgImg,
@@ -31,6 +33,9 @@ function Success(props) {
             <View style={styles.containerText} >
             <Text style={styles.text}>Payement success</Text>
             <Text style={styles.mainText}>Congratulations, your journey is booked!</Text>
+                <Pressable
+                    onPress={() => props.navigation.navigate('Home')}
+                ><Text style={{color: 'lightgrey', marginTop:15, paddingVertical:10  }} >Back to home</Text></Pressable>
             </View>
         </View>
     );
