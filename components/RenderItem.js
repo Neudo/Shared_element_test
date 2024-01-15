@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Pressable, StyleSheet, Image} from "react-native";
+import {View, Text, Pressable, StyleSheet} from "react-native";
 import Animated, {FadeInDown} from "react-native-reanimated";
 import {useNavigation} from "@react-navigation/native";
 
