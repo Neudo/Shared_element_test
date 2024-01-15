@@ -1,8 +1,8 @@
-import React from 'react';
-import {View, Text, StyleSheet, Pressable, Image, Dimensions, TextInput} from "react-native";
+import React, {useEffect, useRef} from 'react';
+import {View, Text, StyleSheet, Pressable, Image, Dimensions, TextInput, Animated, Easing} from "react-native";
 import Header from "../components/Header";
 import { ListItem } from '@rneui/themed';
-import {color, Icon} from "@rneui/base";
+import {Icon} from "@rneui/base";
 import {useNavigation} from "@react-navigation/native";
 import {useSelector} from "react-redux";
 
@@ -13,6 +13,43 @@ function Book({route}) {
     const screenWidth = Dimensions.get("window").width;
     const [pressed, setPressed] = React.useState(true);
     const [expanded, setExpanded] = React.useState(false);
+
+    const paypalAnim = useRef(new Animated.Value(-screenWidth * 1.2)).current
+    const visaAnim = useRef(new Animated.Value(0)).current
+
+    const handleVisa = () => {
+        setPressed(true)
+        Animated.timing(visaAnim, {
+            toValue: 0,
+            duration: 450,
+            useNativeDriver: true,
+            easing: Easing.elastic(.9),
+        }).start()
+
+        Animated.timing(paypalAnim, {
+            toValue: -screenWidth * 1.2,
+            duration: 400,
+            useNativeDriver: true,
+            easing: Easing.elastic(1),
+        }).start()
+    }
+    const handlePaypal = () => {
+        setPressed(false)
+        Animated.timing(visaAnim, {
+            toValue: screenWidth * 1.2,
+            duration: 400,
+            useNativeDriver: true,
+            easing: Easing.elastic(1),
+        }).start()
+
+        Animated.timing(paypalAnim, {
+            toValue: 0,
+            duration: 450,
+            useNativeDriver: true,
+            easing: Easing.elastic(.9),
+        }).start()
+
+    }
 
     return (
         <View style={styles.container}>
@@ -49,7 +86,7 @@ function Book({route}) {
             </View>
 
             <View style={styles.containerCtaCredit}>
-                <Pressable onPress={ ()=> { setPressed(true) } } >
+                <Pressable onPress={ ()=> { handleVisa() } } >
                     <View style={[styles.ctaCredit, {width: screenWidth / 3, marginRight: 15, opacity: pressed ? 1 : .5 }]} >
                         <Image
                             source={require("../assets/visa.png")}
@@ -57,7 +94,7 @@ function Book({route}) {
                         />
                     </View>
                 </Pressable>
-                <Pressable  onPress={ () => { setPressed(false) } } >
+                <Pressable  onPress={ () => { handlePaypal() } } >
                     <View style={[styles.ctaCredit, {width: screenWidth / 3, opacity: !pressed ? 1 : .5   }]} >
                         <Image
                             source={require("../assets/paypal.png")}
@@ -73,27 +110,26 @@ function Book({route}) {
                 <Text style={styles.payementContent} >All transactions are secure and encrypted</Text>
 
                 <View style={styles.creditCard} >
-                    {pressed ? (
-                        <>
-                            <Image
-                                source={require("../assets/visa.png")}
-                                style={{width: 70, height: 20, padding: 30, marginLeft: 10}}
-                            />
 
-                            <Text style={styles.cardNumber} >1234 5678 9101 1121</Text>
-                            <Text style={styles.cardContent} >John Doe</Text>
-                            <Text style={styles.cardContent} >Expire date : 04/28</Text>
-                        </>
-                    ) : (
-                        <>
-                            <Image
-                                source={require("../assets/paypal.png")}
-                                style={{width: 70, height: 20, padding: 30, marginLeft: 10, resizeMode: 'contain'}}
-                            />
-                            <TextInput style={styles.input}  placeholder='email' placeholderTextColor="black" />
-                            <TextInput style={styles.input} placeholder='password' placeholderTextColor="black" />
-                        </>
-                    )}
+                    <Animated.View style={ [styles.cardContainer, {transform: [{translateX: visaAnim }]}] } >
+
+                    <Image
+                            source={require("../assets/visa.png")}
+                            style={{width: 70, height: 20, padding: 30, marginLeft: 10}}
+                        />
+                        <Text style={styles.cardNumber} >1234 5678 9101 1121</Text>
+                        <Text style={styles.cardContent} >John Doe</Text>
+                        <Text style={styles.cardContent} >Expire date : 04/28</Text>
+                    </Animated.View>
+
+                    <Animated.View style={[ styles.cardContainer, {transform: [{translateX: paypalAnim }]}]} >
+                        <Image
+                            source={require("../assets/paypal.png")}
+                            style={{width: 70, height: 20, padding: 30, marginLeft: 10, resizeMode: 'contain'}}
+                        />
+                        <TextInput style={styles.input}  placeholder='email' placeholderTextColor="black" />
+                        <TextInput style={styles.input} placeholder='password' placeholderTextColor="black" />
+                    </Animated.View>
                 </View>
 
                 <Pressable onPress={() => navigation.navigate('Success')}>
@@ -156,6 +192,13 @@ const styles = StyleSheet.create({
     payementContent: {
         color: '#8a8a8a',
     },
+    cardContainer: {
+      position: 'absolute',
+      backgroundColor: '#94bde0',
+        width: '100%',
+        height: 200,
+        borderRadius: 10,
+    },
     ctaCredit: {
         backgroundColor: 'white',
         // marginHorizontal: '5%',
@@ -173,7 +216,6 @@ const styles = StyleSheet.create({
         marginHorizontal: '5%',
     },
     creditCard: {
-        backgroundColor: '#94bde0',
         width: '100%',
         height: 200,
         borderRadius: 10,
